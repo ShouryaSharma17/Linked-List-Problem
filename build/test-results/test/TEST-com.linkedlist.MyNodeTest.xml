@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.linkedlist.MyNodeTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-04-28T13:59:05" hostname="DESKTOP-DCC7S3K" time="0.155">
+<testsuite name="com.linkedlist.MyNodeTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-04-28T15:06:45" hostname="DESKTOP-DCC7S3K" time="0.049">
   <properties/>
-  <testcase name="givenInput_ToLinkedList_ShouldPassTest()" classname="com.linkedlist.MyNodeTest" time="0.147"/>
+  <testcase name="givenInput_ToLinkedList_ShouldPassTest()" classname="com.linkedlist.MyNodeTest" time="0.038"/>
   <testcase name="givenInput_ToLinkedList_ShouldAddToFront()" classname="com.linkedlist.MyNodeTest" time="0.006"/>
+  <testcase name="givenInput_ToLinkedList_ShouldAppendToElement()" classname="com.linkedlist.MyNodeTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
