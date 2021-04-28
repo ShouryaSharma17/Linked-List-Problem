@@ -39,4 +39,16 @@ public class MyNodeTest {
         myLinkedList.append(thirdNode);
         Assertions.assertTrue(myLinkedList.head.equals(firstNode) && myLinkedList.head.getNext().equals(secondNode) && myLinkedList.tail.equals(thirdNode));
     }
+    // Test to verify if the elements are inserted in between
+    @Test
+    public void givenInput_ToLinkedList_ShouldInsertedInBetween(){
+        MyNode<Integer> firstNode = new MyNode(56);
+        MyNode<Integer> secondNode = new MyNode(30);
+        MyNode<Integer> thirdNode = new MyNode(70);
+        MyLinkedList myLinkedList=new MyLinkedList();
+        myLinkedList.add(firstNode);
+        myLinkedList.append(secondNode);
+        myLinkedList.append(thirdNode);
+        Assertions.assertTrue(myLinkedList.head.equals(firstNode) && myLinkedList.head.getNext().equals(secondNode) && myLinkedList.tail.equals(thirdNode));
+    }
 }
