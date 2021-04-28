@@ -51,4 +51,16 @@ public class MyNodeTest {
         myLinkedList.append(thirdNode);
         Assertions.assertTrue(myLinkedList.head.equals(firstNode) && myLinkedList.head.getNext().equals(secondNode) && myLinkedList.tail.equals(thirdNode));
     }
+    @Test
+    public void givenFirstElement_WhenDeleted_ShouldPassTest(){
+        MyNode<Integer> firstNode = new MyNode(56);
+        MyNode<Integer> secondNode = new MyNode(30);
+        MyNode<Integer> thirdNode = new MyNode(70);
+        MyLinkedList myLinkedList=new MyLinkedList();
+        myLinkedList.add(firstNode);
+        myLinkedList.append(secondNode);
+        myLinkedList.append(thirdNode);
+        INode deletedElement = myLinkedList.popElements();
+        Assertions.assertTrue(deletedElement.equals(firstNode) && myLinkedList.head.equals(secondNode) && myLinkedList.tail.equals(thirdNode));
+    }
 }
