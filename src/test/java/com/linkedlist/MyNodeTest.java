@@ -91,4 +91,21 @@ public class MyNodeTest {
         Assertions.assertTrue(myLinkedList.head.equals(firstNode) && myLinkedList.head.getNext().equals(secondNode) &&
                 myLinkedList.tail.equals(thirdNode) && searchedElement.equals(secondNode));
     }
+    // Test to verify if the element is inserted
+    @Test
+    public void givenElement_WhenFound_ShouldBeInserted_ShouldPassTest(){
+        MyNode<Integer> firstNode = new MyNode(56);
+        INode<Integer> secondNode = new MyNode(30);
+        MyNode<Integer> thirdNode = new MyNode(70);
+        MyNode<Integer> fourthNode = new MyNode(40);
+        MyLinkedList myLinkedList=new MyLinkedList();
+        myLinkedList.add(firstNode);
+        myLinkedList.append(secondNode);
+        myLinkedList.append(thirdNode);
+        myLinkedList.insertNode(fourthNode);
+        Assertions.assertTrue(myLinkedList.head.equals(firstNode) &&
+                myLinkedList.head.getNext().equals(secondNode) &&
+                myLinkedList.head.getNext().getNext().equals(fourthNode) &&
+                myLinkedList.tail.equals(thirdNode));
+    }
 }

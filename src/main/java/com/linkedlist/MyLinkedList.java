@@ -68,6 +68,20 @@ public class MyLinkedList {
         }
         return searchedNode;
     }
+    // Method to search and insert that element in list
+    public void insertNode(INode myNode){
+        INode tempNode = head;
+//        INode insertedNode= null;
+        while(tempNode != null && tempNode.getNext() != null) {
+            if(tempNode.getKey().equals(30)){
+                myNode.setNext(tempNode.getNext());
+                tempNode.setNext(myNode);
+                break;
+            }
+            else
+            tempNode = tempNode.getNext();
+        }
+    }
     // Method to print nodes
     public void print() {
         StringBuffer myNodes= new StringBuffer("All nodes : ");
@@ -82,3 +96,4 @@ public class MyLinkedList {
         System.out.println(myNodes);
     }
 }
+
