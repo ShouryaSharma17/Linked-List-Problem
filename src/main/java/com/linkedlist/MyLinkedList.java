@@ -71,7 +71,6 @@ public class MyLinkedList {
     // Method to search and insert that element in list
     public void insertNode(INode myNode){
         INode tempNode = head;
-//        INode insertedNode= null;
         while(tempNode != null && tempNode.getNext() != null) {
             if(tempNode.getKey().equals(30)){
                 myNode.setNext(tempNode.getNext());
@@ -80,6 +79,21 @@ public class MyLinkedList {
             }
             else
             tempNode = tempNode.getNext();
+        }
+    }
+    // Method to delete node
+    public void deleteNode( INode myNode){
+        INode tempNode= this.head;
+        INode precedingNode = this.head;
+        while (tempNode != null && tempNode.getNext() != null) {
+            if (tempNode.getKey().equals(40)) {
+                precedingNode.setNext(tempNode.getNext());
+                this.tail = tempNode.getNext();
+                break;
+            } else {
+                precedingNode = tempNode;
+                tempNode = tempNode.getNext();
+            }
         }
     }
     // Method to print nodes

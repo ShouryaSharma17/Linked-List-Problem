@@ -108,4 +108,20 @@ public class MyNodeTest {
                 myLinkedList.head.getNext().getNext().equals(fourthNode) &&
                 myLinkedList.tail.equals(thirdNode));
     }
+    // Test to verify if the element is deleted from the list
+    @Test
+    public void givenElement_ToBeDeleted_ShouldDelete(){
+        MyNode<Integer> firstNode = new MyNode(56);
+        INode<Integer> secondNode = new MyNode(30);
+        MyNode<Integer> thirdNode = new MyNode(40);
+        MyNode<Integer> fourthNode = new MyNode(70);
+        MyLinkedList myLinkedList=new MyLinkedList();
+        myLinkedList.add(firstNode);
+        myLinkedList.append(secondNode);
+        myLinkedList.append(thirdNode);
+        myLinkedList.deleteNode(thirdNode);
+        Assertions.assertTrue(myLinkedList.head.equals(firstNode) &&
+                myLinkedList.head.getNext().equals(secondNode) &&
+                myLinkedList.tail.equals(thirdNode));
+    }
 }
